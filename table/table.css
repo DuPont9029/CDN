@@ -1,0 +1,42 @@
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .grid-item {
+    background-color: #e0e0e0;
+    padding: 20px;
+    /* Imposta altezza uguale alla larghezza per elementi quadrati */
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+  }
+
+  .grid-item > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  /* Media query per tablet */
+  @media (min-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* Media query per desktop */
+  @media (min-width: 1024px) {
+    .grid-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  body {
+    background-color: black;
+  }
